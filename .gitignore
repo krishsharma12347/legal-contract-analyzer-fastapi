@@ -1,0 +1,4 @@
+__pycache__/
+*.log
+*.pdf
+.ipynb_checkpoints/
