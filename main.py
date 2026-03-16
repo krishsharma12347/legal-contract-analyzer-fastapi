@@ -5,6 +5,8 @@ import numpy as np
 from collections import defaultdict
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
+    
 
 # ✅ FastAPI app
 app = FastAPI()
@@ -93,6 +95,11 @@ async def process_pdf(file: UploadFile = File(...)):
         "missing_clauses": missing
     }
 
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Legal Contract Analyzer API is running!"}
 
 
 
